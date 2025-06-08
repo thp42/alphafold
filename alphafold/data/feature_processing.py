@@ -62,8 +62,7 @@ def pair_and_merge(
   np_chains_list = list(all_chain_features.values())
 
   pair_msa_sequences = not _is_homomer_or_monomer(np_chains_list)
-  #This is my modified version
-  pair_msa_sequences = False
+
             
 
   if pair_msa_sequences:
@@ -121,7 +120,8 @@ def _crop_single_chain(chain: pipeline.FeatureDict,
 
   if pair_msa_sequences:
     msa_size_all_seq = chain['num_alignments_all_seq']
-    msa_crop_size_all_seq = np.minimum(msa_size_all_seq, msa_crop_size // 2)
+    msa_crop_size_all_seq = np.minimum(msa_size_all_seq, 1)
+    # msa_crop_size_all_seq = np.minimum(msa_size_all_seq, msa_crop_size // 2)  
 
     # We reduce the number of un-paired sequences, by the number of times a
     # sequence from this chain's MSA is included in the paired MSA.  This keeps
