@@ -69,7 +69,7 @@ def create_paired_features(
     updated_chains = []
     paired_chains_to_paired_row_indices = pair_sequences(chains)
     paired_rows = reorder_paired_rows(
-        paired_chains_to_paired_row_indices)
+        paired_chains_to_paired_row_indices)[:1]
 
     for chain_num, chain in enumerate(chains):
       new_chain = {k: v for k, v in chain.items() if '_all_seq' not in k}
