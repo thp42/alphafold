@@ -61,8 +61,8 @@ def pair_and_merge(
 
   np_chains_list = list(all_chain_features.values())
 
-  # pair_msa_sequences = not _is_homomer_or_monomer(np_chains_list)
-  pair_msa_sequences = False
+  pair_msa_sequences = not _is_homomer_or_monomer(np_chains_list)
+
 
   if pair_msa_sequences:
     np_chains_list = msa_pairing.create_paired_features(
