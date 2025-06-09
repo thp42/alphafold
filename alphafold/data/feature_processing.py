@@ -33,7 +33,7 @@ REQUIRED_FEATURES = frozenset({
 })
 
 MAX_TEMPLATES = 4
-MSA_CROP_SIZE = 2048
+MSA_CROP_SIZE = 200000
 
 
 def _is_homomer_or_monomer(chains: Iterable[pipeline.FeatureDict]) -> bool:
