@@ -122,8 +122,8 @@ class DataPipeline:
                template_searcher: TemplateSearcher,
                template_featurizer: templates.TemplateHitFeaturizer,
                use_small_bfd: bool,
-               mgnify_max_hits: int = 501,
-               uniref_max_hits: int = 10000,
+               mgnify_max_hits: int = 50001,
+               uniref_max_hits: int = 1000000,
                use_precomputed_msas: bool = False):
     """Initializes the data pipeline."""
     self._use_small_bfd = use_small_bfd
